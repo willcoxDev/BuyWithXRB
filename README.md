@@ -1,6 +1,6 @@
 # BuyWithXRB
 
-![alt text](https://imgur.com/qx4xitN)
+![alt text](https://i.imgur.com/qx4xitN.png)
 
 * Buy With XRB (RaiBlocks) Button , easy to add to your website
 * When User Clicks On The Button it should Genereate JSON String With Information Needed
