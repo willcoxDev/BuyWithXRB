@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Buy With RaiBlocks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="qrcode.js"></script>
+<style>
+
+#container{
+	text-align:center;
+	padding:auto;
+
+}
+
+
+#pay{
+	background-color:#2196F3;
+	padding:8px;
+    border: none;
+    color: white;
+	margin:10px 0px;
+	width:20%;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#qrcode{
+	width:20%;
+}
+
+#xrb-adress{
+	width:20%;
+	padding: 15px;
+    margin: -3px 0;
+	text-align: center;
+    box-sizing: border-box;
+
+}
+
+#deposit_adress{
+	color: #E91E63;
+	width:20%;
+	padding: 3px;
+    margin: 0px 0px 10px 0px;
+	text-align: center;
+    box-sizing: border-box;
+}
+</style>
+
+</head>
+<body>
+<div id="container">
+<form>
+
+<span id="qrcode"></span><br>
+<input id="deposit_adress" type="text" readonly placeholder="Your XRB Adress Here" value="xrb_3hp74gfrhtgg9ph61equ5wmm9pcbrj7f3zj7435gnoybwqoyjstkzi4mrioh" /><br>
+<input id="xrb-adress" type="text" placeholder="Your XRB Adress Here" /><br>
+<button onclick="	generateJSON();" id="pay" >Pay With XRB</button>
+<div>
+</form>
+<script>
+   var qrcode = new QRCode(document.getElementById("qrcode"), {width : 100,height : 100});
+	qrcode.makeCode("ssdsdsdsdsd");
+
+document.getElementById("pay").addEventListener("click", function(){
+    generateCode();
+});
+$("#qrcode > img").css({"margin":"auto"});
+
+function generateJSON(){
+   var obj = new Object();
+   obj.user_id = "user_id_here";
+   obj.xrb_adress  = document.getElementById("xrb-adress").value;
+   obj.order_id = 982341;
+   var jsonString= JSON.stringify(obj);
+   alert(jsonString);
+   return jsonString ;
+   }
+
+
+</script>
+</body>
+</html>
