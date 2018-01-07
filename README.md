@@ -1,4 +1,4 @@
-# BuyWithXRB
+# Pay With (RaiBlocks) Button
 
 ![alt text](https://i.imgur.com/qx4xitN.png)
 
